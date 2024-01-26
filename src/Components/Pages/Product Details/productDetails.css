@@ -1,0 +1,150 @@
+.product-details-page {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.product-details {
+    width: 100%;
+    max-width: 1660px;
+    display: flex;
+    margin-top: 88px;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 900px;
+   
+
+}
+
+
+
+.left-img-details {
+    display: flex;
+    width: 50%;
+    gap: 1rem;
+    height: 100%;
+    
+}
+
+.right-other-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+ 
+    margin-right: 100px;
+}
+
+.details {
+    width: 80%;
+    height: 80%;
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* border: 2px solid black; */
+    
+}
+
+.diff-img {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    width: 21%;
+   
+ 
+}
+
+
+.mini-img {
+    height: 24%;
+    width: 100%;
+ 
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.mini-img img {
+    height: 100%;
+}
+
+.img-display {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    
+
+}
+.img-display img{
+    width: 100%;
+}
+
+.price{
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.old-price{
+    font-weight: bold;
+    color: gray;
+    text-decoration: line-through;
+}
+
+.new-price{
+    font-weight: bold;
+   
+
+}
+
+.sizes{
+    height: 100px;
+    width: 50%;
+ 
+}
+.sizes-btn{
+    width: 100%;
+    height: 70px;
+    width: 100%;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.size-btn{
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 30px;
+    width: 30px;
+    padding: 3px;
+    cursor: pointer;
+    /* border: 2px solid red; */
+    background-color: rgb(240, 240, 245)
+}
+
+.add-to-cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    background: red;
+}
