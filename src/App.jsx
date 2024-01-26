@@ -7,7 +7,6 @@ import StoreContextProvider from './Components/Store/storeContext'
 
 function App() {
    let a='baby';
-
    return (<>
       <StoreContextProvider>
          <Header></Header>
