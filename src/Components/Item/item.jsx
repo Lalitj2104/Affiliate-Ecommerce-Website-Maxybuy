@@ -1,21 +1,18 @@
 import React from 'react'
 import './item.css'
 import product1 from '../../assets/product_1.png'
-import { NavLink } from 'react-router-dom'
-const Item = ({ id,name,  image, newPrice, oldPrice, off = 50 }) => {
-  function selectedItem() {
-    console.log("Selected Item")
+import { NavLink, useNavigate } from 'react-router-dom'
+const Item = ({ id, name, image, newPrice, oldPrice, off = 50 }) => {
+  const naviGate = useNavigate();
+
+  function productDetails() {
+    console.log("pd")
+    naviGate('/productDetails', {state : { image, name, newPrice, oldPrice, off, id }})
+
   }
   return (
 
-    <NavLink image={image} onClick={selectedItem}
-
-
-      to={{
-        pathname: '/productDetails',
-      }}
-      state={{ image, name, newPrice, oldPrice, off ,id}}
-      className="item">
+    <div image={image} onClick={()=>productDetails()} className="item">
       <div className="product-img">
         <img src={image} alt="product_1" />
       </div>
@@ -39,7 +36,7 @@ const Item = ({ id,name,  image, newPrice, oldPrice, off = 50 }) => {
         </div>
 
       </div>
-    </NavLink>
+    </div>
   )
 }
 
