@@ -10,6 +10,7 @@ import Women from './Components/Pages/Women/women.jsx'
 import Kids from './Components/Pages/kids/kids.jsx'
 import About from './Components/Pages/About/about.jsx'
 import ProductDetails from './Components/Pages/Product Details/productDetails.jsx'
+import CartContainer from './Components/Pages/Cart Container/CartContainer.jsx'
  
  
 
@@ -24,6 +25,8 @@ const router = createBrowserRouter(
       <Route path='productDetails' element={<ProductDetails />}/>
       <Route path='login' element={<Login />}/>
       <Route path='signUp' element={<SignUp />}/>
+      <Route path='cartContainer' element={<CartContainer />}/>
+
     </Route>
   )
 )

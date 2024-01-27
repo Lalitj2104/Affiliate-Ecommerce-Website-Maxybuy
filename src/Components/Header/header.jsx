@@ -23,7 +23,7 @@ const Header = () => {
           <NavLink onClick={() => setMenuState('login')} to='login' className='login'>Login</NavLink>
 
 
-          <NavLink className="cart">
+          <NavLink to='cartContainer' className="cart">
             <span className='countItem'>{items.length}</span>
             <img src={AllImgList.cartIcon} alt="cart img" />
           </NavLink>
