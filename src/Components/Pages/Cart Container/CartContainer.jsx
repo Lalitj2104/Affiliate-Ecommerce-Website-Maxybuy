@@ -1,7 +1,10 @@
 import React from 'react'
-import './cartContainer.css'
+import './CartContainer.css'
 import CartItem from './cartItem'
+import { useLocation } from 'react-router-dom'
 const CartContainer = () => {
+  const location =   useLocation()
+  console.log(location)
     return (
         <div className="cart-container">
             <div className="cartItems">
