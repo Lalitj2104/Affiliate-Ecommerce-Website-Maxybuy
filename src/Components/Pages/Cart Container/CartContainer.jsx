@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './CartContainer.css'
 import CartItem from './cartItem'
 import { useLocation } from 'react-router-dom'
+import { StoreContext } from '../../Store/storeContext'
 const CartContainer = () => {
   const location =   useLocation()
+   const {items} = useContext(StoreContext)
   console.log(location)
     return (
         <div className="cart-container">
@@ -22,7 +24,7 @@ const CartContainer = () => {
                     </div>
 
                 </div>
-                <CartItem></CartItem>
+                {items.map((e)=> <CartItem id={e.id} itemCount ={e.itemCount} ></CartItem>)}
                 <div className="cart-price">
                     <div className="left-calc">
                         <div className="calculation">

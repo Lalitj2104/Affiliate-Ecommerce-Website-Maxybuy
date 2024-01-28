@@ -11,7 +11,7 @@ const HomeSection = ({ headerName,data_product}) => {
                 </div>
 
                 <div className="women-prodcuts">
-                    {data_product.map ((e,idx)=> <Item name={e.name} image={e.image} newPrice={e.new_price} oldPrice={e.old_price} off={e.off}></Item>)}
+                    {data_product.map ((e,idx)=> <Item id={e.id} name={e.name} image={e.image} newPrice={e.new_price} oldPrice={e.old_price} off={e.off}></Item>)}
                 </div>
 
             </div>

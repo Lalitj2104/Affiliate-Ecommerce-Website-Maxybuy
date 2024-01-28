@@ -12,17 +12,33 @@ export const StoreContext = createContext(
     }
 );
 
+
+
 const reducer_Func = (currState, action) => {
     let items=currState;
     if (action.type === 'DELETE') {
-        items = currState.filter((item) => {
-            if (item !=action.payload.id ) {
-                return item;
-            }
-        })
+        items = currState.filter((item) => item.id !== action.payload.id);
+    }
+    else if(action.type==='ADD'){
 
-    }else if(action.type==='ADD'){
-        items=[...currState, action.payload.id]
+        let flag = true;
+       items =  currState.map(element => {
+            if(element.id===action.payload.id){
+                flag=false;
+                
+                return {id:action.payload.id, itemCount:element.itemCount +1};
+            }else{
+                return element;
+            }
+            
+        });
+
+        if(flag){
+            items = [...currState, {id:action.payload.id, itemCount:1}]
+
+        }
+
+         
 
     }
 
@@ -42,9 +58,9 @@ const StoreContextProvider = ({ children }) => {
 
     const [items, dispatchItems] = useReducer(reducer_Func, []);
     const [menu, setMenu] = useState('shop');
+
     const deleteItemFromCart = (id) => {
-
-
+        console.log(id+" ")
 
         const delteedItem = {
             type: 'DELETE',
@@ -60,12 +76,12 @@ const StoreContextProvider = ({ children }) => {
   
 
     const addToCart = (id) => {
-        console.log("A")
+        console.log(items)
 
         const newItem = {
             type:'ADD',
             payload:{
-                id:id
+                id:id 
             }
         }
 

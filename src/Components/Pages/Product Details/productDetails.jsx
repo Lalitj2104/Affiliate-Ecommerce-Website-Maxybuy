@@ -42,8 +42,6 @@ const ProductDetails = () => {
             </div>
 
           </div>
-
-
           <div className="right-other-details">
             <div className="details">
               <div className="product-name-details">

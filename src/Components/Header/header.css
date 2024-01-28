@@ -11,7 +11,13 @@ header{
 .navbar{
     width: 99%;
     max-width: 1700px;
-    background-color: rgb(8, 5, 30);
+    background: rgb(8, 5, 30,0.87);
+box-shadow: 0 8px 32px 0 rgb(8, 5, 30,0.89);
+backdrop-filter: blur( 6.5px );
+-webkit-backdrop-filter: blur( 6.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
     height: 75px;
     display: flex;
     align-items: center;

@@ -1,26 +1,42 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './CartContainer.css'
-const CartItem = () => {
+import all_product from '../../../assets/all_product'
+import { StoreContext } from '../../Store/storeContext'
+const CartItem = ({id,itemCount}) => {
+
+    const { deleteItemFromCart} = useContext(StoreContext)
+    let thisItem;
+     
+     all_product.forEach((e)=> {
+        if(e.id==id){
+            thisItem = e;
+        }
+
+
+    })
+     
+    console.log(thisItem)
+
     return (
         <div className="item-detail">
             <div className="img-title">
                 <div className="item-img">
-                    <img src="" alt="" />
+                    <img src={thisItem.image} alt="" />
                 </div>
                 <div className="item-title">
                     <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
             </div>
             <div className="item-price">
-                <span>₹34</span>
+                <span>₹{thisItem.new_price}</span>
             </div>
             <div className="item-quantity">
-                2
+                {itemCount}
             </div>
             <div className="item-total">
-                <span>₹45</span>
+                <span>₹{thisItem.new_price*itemCount}</span>
             </div>
-            <div className="item-remove"><span>X</span></div>
+            <div className="item-remove" onClick={()=> deleteItemFromCart(id)} ><span>X</span></div>
         </div>
     )
 }

@@ -10,11 +10,8 @@ import new_collections from '../../../assets/new_collections'
 const Home = () => {
   console.log(data_product)
   return (<>
- 
+
     <section className='hero-section'>
-     
-    
-    
 
       <div className="hero">
         <div className="hero-left">
@@ -26,7 +23,7 @@ const Home = () => {
           </div>
 
           <div className="go-latest">
-            <button>Latest Collectons <img src={ arrow} alt="arrow" /></button>
+            <button>Latest Collectons <img src={arrow} alt="arrow" /></button>
           </div>
 
 
@@ -37,7 +34,7 @@ const Home = () => {
 
         </div>
 
-       
+
       </div>
       <HomeSection headerName={'POPUAR IN WOMEN'} data_product={data_product}></HomeSection>
       <GetOffer></GetOffer>
@@ -46,7 +43,7 @@ const Home = () => {
     </section>
 
 
- 
+
   </>
 
 
