@@ -1,4 +1,4 @@
-header{
+header {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -8,24 +8,27 @@ header{
     top: 10px;
 }
 
-.navbar{
+.navbar {
+    /* https://hype4.academy/tools/glassmorphism-generator */
+
     width: 99%;
     max-width: 1700px;
-    background: rgb(8, 5, 30,0.87);
-box-shadow: 0 8px 32px 0 rgb(8, 5, 30,0.89);
-backdrop-filter: blur( 6.5px );
--webkit-backdrop-filter: blur( 6.5px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-    
+    background: rgb(8, 5, 30, 0.87);
+    box-shadow: 0 8px 32px 0 rgb(8, 5, 30, 0.89);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
     height: 75px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 7px;  
+    border-radius: 7px;
     border: 1px solid gray
 }
-.logo{
+
+.logo {
     color: #fff;
     margin-left: 30px;
     cursor: pointer;
@@ -33,30 +36,34 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     font-size: 30px;
     font-weight: bold;
 }
-.nav-links{
+
+.nav-links {
     display: flex;
     width: 40%;
     justify-content: space-between;
     color: #fff;
 }
-hr{
+
+hr {
     background-color: #fff;
     border-radius: 10px;
     border: none;
     height: 3px;
 }
-.nav-links li{
+
+.nav-links li {
     list-style: none;
 }
-.nav-links li a{
+
+.nav-links li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
-   
+
 }
 
-.login-sign-up{
+.login-sign-up {
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -68,7 +75,8 @@ hr{
     /* border: 1px solid rgb(249, 246, 58); */
 
 }
-.login{
+
+.login {
     height: 30px;
     font-size: 18px;
     width: 70px;
@@ -80,11 +88,11 @@ hr{
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    
-    
+
+
 }
 
-.cart{
+.cart {
     height: 40px;
     display: flex;
     align-items: center;
@@ -98,18 +106,19 @@ hr{
 
 }
 
-.cart img{
+.cart img {
     height: 65%;
 }
-.cart h1{
+
+.cart h1 {
     color: #fff;
 }
 
-.login:hover{
+.login:hover {
     background-color: #223e6f;
 }
 
-.countItem{
+.countItem {
     position: absolute;
     top: -13px;
     left: 37%;
@@ -122,9 +131,10 @@ hr{
     justify-content: center;
     background-color: rgb(61, 220, 61);
     border-radius: 50%;
-    
+
 }
-.sign-up{
+
+.sign-up {
     width: 100%;
     outline: none;
     border-radius: 5px;
@@ -139,6 +149,6 @@ hr{
 
 }
 
-.sign-up:hover{
+.sign-up:hover {
     background-color: #091934;
 }
