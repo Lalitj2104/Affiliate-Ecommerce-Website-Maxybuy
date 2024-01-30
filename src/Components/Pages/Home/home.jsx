@@ -13,10 +13,10 @@ const Home = () => {
 
     <section className='hero-section'>
 
-      <div className="hero">
+      <div className="hero flex-col sm:flex-row">
         <div className="hero-left">
-          <div className="slogan">
-            <h1>Evevate Your Style</h1>
+          <div className="slogan w-4">
+            <h1 className='text-xl'>Evevate Your Style</h1>
           </div>
           <div className="slogan-description">
             <h1>New <br />Collections <br />for Everyone</h1>
@@ -29,8 +29,8 @@ const Home = () => {
 
         </div>
 
-        <div className="hero-right">
-          <img className='hero-img' src={heroImage} alt="hero-img" />
+        <div className="hero-right sm:h-full">
+          <img className='hero-img  ' src={heroImage} alt="hero-img" />
 
         </div>
 
