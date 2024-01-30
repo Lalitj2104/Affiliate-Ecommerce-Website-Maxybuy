@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
+import './index.css'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import Home from './Components/Pages/Home/home.jsx'
 import Men from './Components/Pages/Men/men.jsx'
@@ -12,7 +13,7 @@ import About from './Components/Pages/About/about.jsx'
 import ProductDetails from './Components/Pages/Product Details/productDetails.jsx'
 import CartContainer from './Components/Pages/Cart Container/CartContainer.jsx'
  
- 
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
