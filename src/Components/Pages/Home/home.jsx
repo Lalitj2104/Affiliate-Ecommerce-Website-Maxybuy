@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import heroImage from '../../../assets/hero_image.png'
 import arrow from '../../../assets/arrow.png'
 import HomeSection from './homeSection'
@@ -7,6 +7,11 @@ import data_product from '../../../assets/data'
 import new_collections from '../../../assets/new_collections'
 
 const Home = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [ ]);
+
   console.log(data_product)
   return (<>
 

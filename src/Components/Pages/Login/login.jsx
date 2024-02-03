@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './login.module.css'
 import { NavLink } from 'react-router-dom'
 
 const Login = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className={styles.loginContainer}>
             <div className={styles.login}>

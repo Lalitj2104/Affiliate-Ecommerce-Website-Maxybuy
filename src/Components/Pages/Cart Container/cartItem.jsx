@@ -1,8 +1,12 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import './CartContainer.css'
 import all_product from '../../../assets/all_product'
 import { StoreContext } from '../../Store/storeContext'
 const CartItem = ({id,itemCount}) => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, [ ]);
 
     const { deleteItemFromCart} = useContext(StoreContext)
     let thisItem;

@@ -1,11 +1,18 @@
 
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { StoreContext } from '../../Store/storeContext'
 import Item from '../../Item/item'
 
 
 
 const ProductsShow = ({banner, category}) => {
+
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [ ]);
+
+
   const { all_product} = useContext(StoreContext)
    
   let countMenProduct=0;

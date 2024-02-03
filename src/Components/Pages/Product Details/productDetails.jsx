@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './productDetails.css'
 import { useLocation } from 'react-router-dom'
 import { useContext } from 'react'
 import { StoreContext } from '../../Store/storeContext'
 const ProductDetails = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [ ]);
+
+
   let location = useLocation();
   let { image, name, newPrice, oldPrice, off, id } = location.state || {};
   const { addToCart } = useContext(StoreContext)
