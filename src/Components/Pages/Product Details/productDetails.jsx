@@ -11,12 +11,12 @@ const ProductDetails = () => {
 
 
   return (
-    <div className="product-details-page">
-      <div className="product-details">
+    <div className=" full-page-section">
+      <div className="centre-page-section justify-between flex-col mt-[88px] max-h-[900px]">
 
-        <div className="upper">
-          <div className="left-img-details">
-            <div className="diff-img">
+        <div className="flex w-11/12 h-4/5">
+          <div className="left-img-details flex w-2/4 gap-4 h-full mt-2.5">
+            <div className="h-full flex flex-col items-center justify-around gap-4 w-1/4 rounded-md">
 
 
               <div className="mini-img">
@@ -42,8 +42,8 @@ const ProductDetails = () => {
             </div>
 
           </div>
-          <div className="right-other-details">
-            <div className="details">
+          <div className="flex items-center  justify-center h-full w-3/5">
+            <div className="details  h-4/5 w-4/5 mr-12 flex flex-col justify-around pr-20">
               <div className="product-name-details">
                 <h1>{name}</h1>
               </div>
