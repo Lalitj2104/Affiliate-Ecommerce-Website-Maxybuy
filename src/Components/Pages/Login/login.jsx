@@ -6,14 +6,14 @@ const Login = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, []);
+    }, []); 
 
     return (
-        <div className={styles.loginContainer}>
-            <div className={styles.login}>
+        <div className='full-page-section'>
+            <div className='centre-page-section min-h-[900px] justify-center bg-green '>
 
-                <div className={styles.loginOuter}>
-                    <div className={styles.heading}>
+                <div className='h-3/4 flex flex-col items-centre w-[450px]'>
+                    <div className='w-11/12 h-1/6 bg-green-500'>
 
 
                         <h1>Sign in to <span>E Commerce</span></h1>

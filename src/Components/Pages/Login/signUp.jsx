@@ -6,8 +6,8 @@ import styles from './login.module.css'
 import { NavLink } from 'react-router-dom'
 const SignUp = () => {
     return (
-        <div className={styles.loginContainer}>
-            <div className={styles.login}>
+        <div className='full-page-section'>
+            <div className='centre-page-section min-h-[900px] justify-center'>
 
                 <div className={styles.loginOuter}>
                     <div className={styles.heading}>
