@@ -9,7 +9,7 @@ const GetOffer = () => {
     <section className=" full-page-section">
       <div className="centre-page-section">
         <div className="  h-[300px] flex gap-9 items-center flex-col justify-center w-6/12 ">
-          <h1 className='text-3xl'>Get <br />Exclusive <br /> Offers</h1>
+          <h1 className='text-3xl text-white'>Get <br />Exclusive <br /> Offers</h1>
           <button className='text-3xl rounded-md p-[8px] font-bold flex items-center gap-3 border-none text-white bg-[#07071c]  cursor-pointer ' >Check Now  <img src={arrow} alt="" /></button>
          
         </div>

@@ -9,6 +9,7 @@ const ProductDetails = () => {
     window.scrollTo(0, 0);
   }, [ ]);
 
+  const {setLoged, loged, menu, setMenuState, items } = useContext(StoreContext);
 
   let location = useLocation();
   let { image, name, newPrice, oldPrice, off, id } = location.state || {};
@@ -66,14 +67,14 @@ const ProductDetails = () => {
               <div className="sizes">
                 <h4>Select Size</h4>
                 <div className="sizes-btn">
-                  <div className="s size-btn">S</div>
-                  <div className="m  size-btn">M</div>
-                  <div className="l  size-btn">L</div>
-                  <div className="xl  size-btn">XL</div>
-                  <div className="xxl  size-btn">XXL</div>
+                  <div className="s size-btn hover:bg-[#28253b] hover:text-white transition-all">S</div>
+                  <div className="m  size-btn hover:bg-[#28253b] hover:text-white transition-all">M</div>
+                  <div className="l  size-btn  hover:bg-[#28253b] hover:text-white transition-all">L</div>
+                  <div className="xl  size-btn  hover:bg-[#28253b] hover:text-white transition-all">XL</div>
+                  <div className="xxl  size-btn  hover:bg-[#28253b] hover:text-white transition-all">XXL</div>
                 </div>
               </div>
-              <div className="add-to-cart" onClick={() => addToCart(id)}>
+              <div className="add-to-cart" onClick={() =>  addToCart(id) }>
                 Add to cart
               </div>
               <div className="category-tag">

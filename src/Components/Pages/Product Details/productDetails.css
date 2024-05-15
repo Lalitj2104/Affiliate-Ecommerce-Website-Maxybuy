@@ -75,6 +75,7 @@
     height: 30px;
     width: 30px;
     padding: 3px;
+    font-size: 13px;
     cursor: pointer;
     /* border: 2px solid red; */
     background-color: rgb(240, 240, 245)

@@ -15,19 +15,17 @@ const Home = () => {
   console.log(data_product)
   return (<>
 
-    <section className='full-page-section bg-slate-500'>
+    <section className='full-page-section bg-gradient-to-r from-fuchsia-500 to-cyan-500'>
 
       <div className="centre-page-section h-[900px]">
         <div className="hero-left h-2/5 flex flex-col justify-around pl-[50px]">
-          <div>
-            <h1 className='text-[#2e2626]'>Evevate Your Style</h1>
-          </div>
-          <div >
-            <h1 className='text-[60px]'>New <br />Collections <br />for Everyone</h1>
+        
+          <div className=''> 
+            <h1 className='text-[50px] font-bold text-white'>New <br />Collections <br />for Everyone</h1>
           </div>
 
           <div className="go-latest w-full m-auto">
-            <button className=' text-[25px] cursor-pointer h-[50px] font font-bold rounded-md px-[10px] text-white border-solid border-2  border-white bg-[#08051f]'>Latest Collectons <img src={arrow} alt="arrow" /></button>
+            <button className=' text-[25px] cursor-pointer h-[50px] font font-bold rounded-md px-[10px] text-white border-solid border-2  border-white bg-[#08051f]'>Latest Collectons ➡️</button>
           </div>
 
 

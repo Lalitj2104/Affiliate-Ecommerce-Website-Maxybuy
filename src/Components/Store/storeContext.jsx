@@ -58,6 +58,10 @@ const StoreContextProvider = ({ children }) => {
 
     const [items, dispatchItems] = useReducer(reducer_Func, []);
     const [menu, setMenu] = useState('shop');
+    let [loged,setLoged]= useState(false);
+
+    
+    
 
     const deleteItemFromCart = (id) => {
         console.log(id+" ")
@@ -76,6 +80,12 @@ const StoreContextProvider = ({ children }) => {
   
 
     const addToCart = (id) => {
+
+        if(!loged){
+            alert('Not user Logged')
+            return;
+
+        }
         console.log(items)
 
         const newItem = {
@@ -95,6 +105,9 @@ const StoreContextProvider = ({ children }) => {
         setMenu(newMenu);
 
     }
+    
+    
+
 
 
     return <StoreContext.Provider value={
@@ -105,6 +118,7 @@ const StoreContextProvider = ({ children }) => {
             setMenuState:setMenuState,
             menu:menu,
             all_product:all_product,
+            loged,setLoged
         }
     }>
         {children}

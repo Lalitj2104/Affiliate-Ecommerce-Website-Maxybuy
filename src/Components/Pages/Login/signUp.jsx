@@ -1,14 +1,37 @@
- 
+import React from 'react';
+import styles from './login.module.css';
+import { NavLink } from 'react-router-dom';
 
-
-import React from 'react'
-import styles from './login.module.css'
-import { NavLink } from 'react-router-dom'
 const SignUp = () => {
+    function onsubmit(e) {
+        e.preventDefault(); // Prevent the default form submission
+
+        // Extract form data
+        const formData = new FormData(e.target);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            password: formData.get('password')
+        };
+
+        // Check if user already exists
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+        const userExists = users.some(user => user.email === data.email);
+
+        if (userExists) {
+            alert('User already exists');
+        } else {
+            // Store new user data
+            users.push(data);
+            localStorage.setItem('users', JSON.stringify(users));
+            console.log('User registered successfully:', data);
+        }
+
+    }
+
     return (
         <div className='full-page-section'>
             <div className='centre-page-section min-h-[900px] justify-center'>
-
                 <div className={styles.loginOuter}>
                     <div className={styles.heading}>
                         <h1>Create a <span>free account</span></h1>
@@ -16,48 +39,35 @@ const SignUp = () => {
                     </div>
                     <div className={styles.inputDetails}>
                         <div className={styles.loginWithGF}>
-                            <NavLink className={styles.withLogin}>G</NavLink>
-                            <NavLink className={styles.withLogin}>F</NavLink>
+                            <NavLink className={styles.withLogin}><img className='h-6' src="https://shorturl.at/bhrxL" alt="" /></NavLink>
+                            <NavLink className={styles.withLogin}><img className='h-6' src="https://shorturl.at/tAKSV" alt="" /></NavLink>
                         </div>
                         <div className={styles.useEmail}>
-
                             <p>Or use email to signup </p>
-
                         </div>
-                        <form className={styles.inputForm} action="#">
+                        <form className={styles.inputForm} action="#" onSubmit={onsubmit}>
                             <div className={styles.inputField}>
                                 <label htmlFor="name">Name</label>
-                                <input type="text" className={styles.formControl} id="name" placeholder='Enter your name' />
-                            </div>
-                            <div className={styles.inputField}>
-                                <label htmlFor="userName">Username</label>
-                                <input type="text" className={styles.formControl} id="userName" placeholder='Only alphanumeric allowed [a-z, 0-9]' />
+                                <input type="text" className={styles.formControl} id="name" name="name" placeholder='Enter your name' />
                             </div>
                             <div className={styles.inputField}>
                                 <label htmlFor="email">Email Address</label>
-                                <input type="email" className={styles.formControl} id="email" placeholder='Enter your email Address' />
+                                <input type="email" className={styles.formControl} id="email" name="email" placeholder='Enter your email Address' />
                             </div>
                             <div className={styles.inputField}>
                                 <label htmlFor="password">Password</label>
-                                <input type="password" className={styles.formControl} id="password" placeholder='Enter a new password' />
+                                <input type="password" className={styles.formControl} id="password" name="password" placeholder='Enter a new password' />
                             </div>
-                            <button className={styles.submit}>Submit Details</button>
-
+                            <button className={styles.submit} type="submit">Sign Up</button>
                         </form>
                         <div className={styles.createAccount}>
                             <p>Already Sign Up <NavLink to='/login' className={styles.createSignUp}>Login</NavLink></p>
                         </div>
-
-
                     </div>
-
-
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default SignUp
-
-
+export default SignUp;
